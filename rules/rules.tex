@@ -1,0 +1,67 @@
+\documentclass[fontsize=11pt,paper=a4,pagesize=auto,openany]{scrbook}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{textcomp}
+\usepackage[acronym,style=long3col]{glossaries}
+\frenchspacing
+
+\newacronym{wm}{wm}{World master}
+\newacronym{dc}{dc}{Difficulty class}
+
+\makenoidxglossaries
+\glsaddall
+
+\begin{document}
+  \title{Jonahrpg Rules}
+  \subtitle{A simple generic RPG}
+  \author{jonahgam/bitbloxhub}
+  \maketitle
+  \tableofcontents
+
+  \chapter{Character sheets/creation}
+    A character sheet has:
+
+    \begin{itemize}
+      \item The characters name
+      \item items the character has
+      \item Hit points (HP)
+      \item Experience points (XP)
+      \item Skills
+      \item Apperance
+      \item other needed info
+    \end{itemize}
+
+    \section{Leveling Up}
+      on leveling up, increase a skill by 1.\\
+      a function made by the \gls{wm} tells your level based on xp.
+
+  \chapter{Skills}
+    A skill modifier is the output of a function made by the \gls{wm}.\\
+    To check a skill, \((1d20 + skillmod + bonus - penalty) > DC \).\\
+    A passive skill score is \(10 + skillmod + bonus - penalty\)
+
+  \chapter{Combat}
+    The turn order is made by the \gls{wm}.\\
+    on each turn, the actor can take 1 action.\\
+    if a actor reaches 0 hp, the actor dies.\\
+    actions include:
+    \begin{itemize}
+      \item use item
+      \item pass
+      \item flee
+    \end{itemize}
+
+    \chapter{Adventouring}
+      \section{Marching order}
+        there is a front rank, middle ranks, and a back rank.\\
+        if there are 2 players, p1 is front rank and p2 is the back rank.
+        if there is 1 player, it is the front rank.\\
+        otherwise:
+        \begin{itemize}
+          \item player 1 is the front rank
+          \item players 2..n-1 are middle ranks
+          \item player n is the back rank
+        \end{itemize}
+
+  \printnoidxglossary[type=\acronymtype]
+\end{document}
